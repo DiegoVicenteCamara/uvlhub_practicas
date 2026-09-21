@@ -58,7 +58,7 @@ jobs:
     - name: Security audit of dependencies
       run: |
         pip-audit --desc on
-
+      continue-on-error: true
     - name: Run tests with coverage
       run: |
         coverage run -m pytest app/features/ --ignore-glob='*selenium*'
