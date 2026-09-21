@@ -12,6 +12,8 @@ notepad_service = NotepadService()
 '''
 READ ALL
 '''
+
+
 @notepad_bp.route('/notepad', methods=['GET'])
 @login_required
 def index():
@@ -23,6 +25,8 @@ def index():
 '''
 CREATE
 '''
+
+
 @notepad_bp.route('/notepad/create', methods=['GET', 'POST'])
 @login_required
 def create_notepad():
@@ -42,6 +46,8 @@ def create_notepad():
 '''
 READ BY ID
 '''
+
+
 @notepad_bp.route('/notepad/<int:notepad_id>', methods=['GET'])
 @login_required
 def get_notepad(notepad_id):
@@ -57,6 +63,8 @@ def get_notepad(notepad_id):
 '''
 EDIT
 '''
+
+
 @notepad_bp.route('/notepad/edit/<int:notepad_id>', methods=['GET', 'POST'])
 @login_required
 def edit_notepad(notepad_id):
@@ -81,6 +89,8 @@ def edit_notepad(notepad_id):
 '''
 DELETE
 '''
+
+
 @notepad_bp.route('/notepad/delete/<int:notepad_id>', methods=['POST'])
 @login_required
 def delete_notepad(notepad_id):
